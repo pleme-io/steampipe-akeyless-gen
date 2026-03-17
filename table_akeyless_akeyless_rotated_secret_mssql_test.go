@@ -1,0 +1,18 @@
+package akeyless
+
+import (
+	"testing"
+)
+
+func TestTableAkeylessAkeylessRotatedSecretMssql(t *testing.T) {
+	table := tableAkeylessAkeylessRotatedSecretMssql()
+	if table == nil {
+		t.Fatal("tableAkeylessAkeylessRotatedSecretMssql() returned nil")
+	}
+	if table.Name != "akeyless_akeyless_rotated_secret_mssql" {
+		t.Errorf("expected table name %q, got %q", "akeyless_akeyless_rotated_secret_mssql", table.Name)
+	}
+	if len(table.Columns) == 0 {
+		t.Error("expected at least one column")
+	}
+}
